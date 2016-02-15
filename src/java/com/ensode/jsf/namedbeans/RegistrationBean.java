@@ -1,6 +1,7 @@
 package com.ensode.jsf.namedbeans;
 
 import com.ensode.jsf.models.*;
+import javax.annotation.*;
 import javax.enterprise.context.RequestScoped;
 import javax.inject.Named;
 
@@ -19,6 +20,16 @@ public class RegistrationBean {
     public RegistrationBean() {
         this.setAddress(new Address());
     }  
+    
+    @PostConstruct
+    public void init() {
+        int x = 0;
+    }
+    
+    @PreDestroy
+    public void destroy() {
+        int x = 0;
+    }
 
     public Address getAddress() {
         return address;
