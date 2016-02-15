@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    
+    <ui:composition template="./template.xhtml">
+        
+        <ui:define name="content">
+    
+            <h:panelGrid columns="2" 
+                         columnClasses="rightalign-bold,leftalign">
+                <h:outputText value="Salutation:"/>
+                ${registrationBean.salutation}
+                <h:outputText value="First Name:"/>
+                ${registrationBean.firstName}
+                <h:outputText value="Last Name:"/>
+                ${registrationBean.lastName}
+                <h:outputText value="Age:"/>
+                ${registrationBean.age}
+                <h:outputText value="Email Address:"/>
+                ${registrationBean.email}
+                <fieldset>
+                    <legend><h3>Address</h3></legend>                    
+                    ${registrationBean.address.line1}<br/>
+                    ${registrationBean.address.line2}<br/>
+                    ${registrationBean.address.city}<br/>
+                    ${registrationBean.address.state}<br/>
+                    ${registrationBean.address.zip}<br/>
+                </fieldset>
+                <h:outputText value="Saved Successful:"/>           
+                <h:outputLink 
+                    onclick="showMessage(${registrationBean.saved});return false;"
+                    value="#">
+                     ${registrationBean.saved}
+                </h:outputLink>
+            </h:panelGrid>
+            
+        </ui:define>
+        
+    </ui:composition>
+            
+</html>
+

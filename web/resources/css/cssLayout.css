@@ -1,0 +1,31 @@
+#top {
+    position: relative;
+    background-color: #036fab;
+    color: white;
+    padding: 5px;
+    margin: 0px 0px 0px 0px;
+    height: auto;
+}
+
+.center_content {
+    position: relative;
+    background-color: #dddddd;
+    padding: 5px;    
+}
+
+#top a {
+    font-weight : bold;
+    display: inline;    
+}
+
+#top a:link, #top a:visited {
+  color: white;  
+  text-decoration: none;  
+}
+
+#top a:link:hover, #top a:visited:hover  {
+  color: black; 
+  text-decoration : underline; 
+}
+
+
